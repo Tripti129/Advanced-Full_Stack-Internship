@@ -1,21 +1,36 @@
 import React from "react";
-function Navbar(){
-    return(
-        <>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",backgroundColor:"#FFF0F5",height:"70px",padding:"10px",marginTop:"10px"}}>
-        <img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg" alt="logo" style={{height:"80px",width:"80px"}}/>
+import "./Navbar.css";
 
-        <input type="text" placeholder="search product" style={{height:"40px",width:"400px",borderRadius:"7px"}}/>
-       <div style={{display:"flex",justifyContent:"space-between", gap:"20px",alignItems:"center"}}>
-<a>Home</a>
-<a>About</a>
-<a>Contact Us</a>
-<a>Profile</a>
-       </div>
-       
-        </div>
-        
-        </>
-    )
+function Navbar({cart,show,setshow}) {
+  return (
+    <nav className="navbar">
+      <div className="logoBox">
+        <img
+          src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-creative-company-logo-png-image_1197025.jpg"
+          alt="logo"
+        />
+        <h2>ShopEase</h2>
+      </div>
+
+      <div className="searchBox">
+        <input type="text" placeholder="Search products..." />
+        <button>Search</button>
+      </div>
+
+      <div className="navLinks">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Profile</a>
+        <button style={{ background: "#ff4f93",
+  color: "white",
+  padding: "11px 18px",
+  borderRadius: "25px",
+  cursor: "pointer",
+  fontWeight: "bold"}} onClick={()=>{setshow(!show)}}>Cart</button>
+      </div>
+    </nav>
+  );
 }
+
 export default Navbar;

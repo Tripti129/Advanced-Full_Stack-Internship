@@ -10,6 +10,8 @@ const products = [
     price: "1,10,300",
     mrp: "1,19,000",
     delivery: "Wednesday, June 24",
+    quantity:0,
+    stock : 10
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ const products = [
     price: "172",
     mrp: "1299",
     delivery: "Wednesday, June 24",
+    quantity:0,
+    stock : 10
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ const products = [
     price: "190",
     mrp: "299",
     delivery: "Tuesday, June 23",
+    quantity:0,
+    stock : 10
   },
   {
     id: 4,
@@ -46,6 +52,8 @@ const products = [
     price: "299",
     mrp: "454",
     delivery: "Wednesday, June 24",
+    quantity:0,
+    stock : 10
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ const products = [
     price: "64,900",
     mrp: "69,900",
     delivery: "Tuesday, June 23",
+    quantity:0,
+    stock : 10
   },
 ];
 export default products
