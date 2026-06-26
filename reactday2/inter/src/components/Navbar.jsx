@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-
+import {NavLink} from "react-router-dom"
 function Navbar({cart,show,setshow}) {
   return (
     <nav className="navbar">
@@ -18,15 +18,16 @@ function Navbar({cart,show,setshow}) {
       </div>
 
       <div className="navLinks">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Profile</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/form">Form</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
         <button style={{ background: "#ff4f93",
   color: "white",
   padding: "11px 18px",
   borderRadius: "25px",
   cursor: "pointer",
+  margin:"0",
   fontWeight: "bold"}} onClick={()=>{setshow(!show)}}>Cart</button>
       </div>
     </nav>
